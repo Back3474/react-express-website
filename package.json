@@ -1,0 +1,27 @@
+{
+  "name": "bbfr-website",
+  "version": "1.0.0",
+  "private": true,
+  "pnpm": {
+    "overrides": {
+      "typescript": "~5.7.2"
+    },
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "sqlite3"
+    ]
+  },
+  "scripts": {
+    "start:frontend-dev": "pnpm --filter frontend dev",
+    "start:backend-dev": "pnpm --filter backend dev",
+    "dev": "concurrently \"pnpm start:frontend-dev\" \"pnpm start:backend-dev\"",
+    "lint": "pnpm --filter \"./packages/**\" lint",
+    "build": "pnpm --filter \"./packages/**\" build",
+    "seed:backend": "pnpm --filter backend seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184"
+}

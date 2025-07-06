@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand/Quicksand-Regular.woff2') format('woff2'),
+       url('/fonts/quicksand/Quicksand-Regular.woff') format('woff');
+}
+@import "tailwindcss";
+
+@theme {
+    --font-display: 'Quicksand', sans-serif;
+}
